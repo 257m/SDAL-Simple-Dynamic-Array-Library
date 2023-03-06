@@ -16,13 +16,13 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-You can email me at 1alimaze@gmail.com if you have any questions about the program
+    You can email me at 1alimaze@gmail.com if you have any questions about the program
 
-  Maaz S. Ali, hereby disclaims all copyright interest in the program
-  `Simple Dynamic Array Library' (which makes passes at compilers) written by Maaz S. Ali.
+    Maaz S. Ali, hereby disclaims all copyright interest in the program
+    `Simple Dynamic Array Library` (which makes passes at compilers) written by Maaz S. Ali.
 
-  5th of March, 2023
-  Maaz S. Ali, author
+    5th of March, 2023
+    Maaz S. Ali, author
 */
 
 #include "dynamic_array.h"
