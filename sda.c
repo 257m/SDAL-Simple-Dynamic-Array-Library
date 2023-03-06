@@ -85,3 +85,9 @@ void SDA_shrink_allocated_to_mininum(SDA* array)
 	array->allocated_size = array->used;
 	array->data = realloc(array->data, array->used);
 }
+
+void SDA_free(SDA* array)
+{
+	free(array->data);
+	free(array);
+}

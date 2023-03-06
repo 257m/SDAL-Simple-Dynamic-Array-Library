@@ -120,4 +120,9 @@ extern void SDA_shrink_allocated_to_mininum(SDA* array);
 		Simply decrements the amount of used data.
 	*/
 
+extern void SDA_free(SDA* array)
+	/*
+		Frees the srtucture of the as well as the data it contains
+	*/
+
 #endif /* SDA_H */
