@@ -1,5 +1,5 @@
 /*
-SDAL aka Simple Dynamic Array Library is a dynamic array implemention designed to be small and simple
+    SDAL aka Simple Dynamic Array Library is a dynamic array implemention designed to be small and simple
     Copyright (C) 2023, Maaz S. Ali https://github.com/257m/SDAL-Simple-Dynamic-Array-Library
 
     This program is free software; you can redistribute it and/or modify
@@ -16,13 +16,13 @@ SDAL aka Simple Dynamic Array Library is a dynamic array implemention designed t
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-You can email me at 1alimaze@gmail.com if you have any questions about the program
+    You can email me at 1alimaze@gmail.com if you have any questions about the program
 
-  Maaz S. Ali, hereby disclaims all copyright interest in the program
-  `Simple Dynamic Array Library' (which makes passes at compilers) written by Maaz S. Ali.
+    Maaz S. Ali, hereby disclaims all copyright interest in the program
+    `Simple Dynamic Array Library` (which makes passes at compilers) written by Maaz S. Ali.
 
-  5th of March, 2023
-  Maaz S. Ali, author
+    5th of March, 2023
+    Maaz S. Ali, author
 */
 
 #ifndef DYNAMIC_ARRAY_H
