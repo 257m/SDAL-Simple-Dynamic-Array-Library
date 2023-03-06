@@ -116,7 +116,7 @@ extern void dynamic_array_shrink_allocated_to_mininum(DynamicArray* array);
 
 #define dynamic_array_shrink_used_by_amount(array, amount)	\
 {                                                         	\
-	array->used -= amount                             	\
+	array->used -= amount                             	  	\
 }
 	/*
 		Simply decrements the amount of used data.
