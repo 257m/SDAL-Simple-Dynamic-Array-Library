@@ -22,5 +22,9 @@ int main(void)
 	printf("%s\n", array->data);
 	// We print out the second element which is 'Fives'
 	printf("%s\n", array->data + ELEMENT_SIZE);
+	// We return our resources back to the computer
+	SDA_free(array);
+	// It's good pratice to not leave hanging pointers
+	array = NULL;
  	return 0;
 }
