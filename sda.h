@@ -19,7 +19,7 @@
     You can email me at 1alimaze@gmail.com if you have any questions about the program
 
     Maaz S. Ali, hereby disclaims all copyright interest in the program
-    `Simple Dynamic Array Library` (which makes passes at compilers) written by Maaz S. Ali.
+    `Simple Dynamic Array Library` written by Maaz S. Ali.
 
     5th of March, 2023
     Maaz S. Ali, author
