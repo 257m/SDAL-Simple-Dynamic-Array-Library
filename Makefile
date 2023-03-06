@@ -4,10 +4,10 @@ CC = clang
 override CFLAGS += -g -Wno-everything
 
 compile_example:
-	$(CC) $(CFLAGS) example.c dynamic_array.o -o example
+	$(CC) $(CFLAGS) example.c sda.o -o example
 
 compile_dynamic_array_library:
-	$(CC) -c dynamic_array.c -o dynamic_array.o
+	$(CC) -c sda.c -o sda.o
 
 clean:
 	rm -f example
