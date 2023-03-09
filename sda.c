@@ -25,7 +25,7 @@
     Maaz S. Ali, author
 */
 
-#include "SDA.h"
+#include "sda.h"
 
 SDA* SDA_create(void* data, uint32_t data_size)
 {
