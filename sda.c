@@ -56,7 +56,7 @@ void SDA_add_data_logarithmic(SDA* array, void* data, uint32_t data_size)
 void SDA_add_data_linear(SDA* array, void* data, uint32_t data_size)
 {
 	if ((array->used + data_size) > array->allocated_size)
-		array->allocated_size += (data_size - (array->allocated - array->used));
+		array->allocated_size += (data_size - (array->allocated_size - array->used));
 	array->data = realloc(array->data, array->allocated_size);
 	memcpy(array->data + array->used, data, data_size);
 	array->used += data_size;
