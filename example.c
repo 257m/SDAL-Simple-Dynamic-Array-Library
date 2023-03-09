@@ -26,7 +26,7 @@
 */
 
 #include <stdio.h>
-#include "SDA.h"
+#include "sda.h"
 
 // This going to be the size of each string
 #define ELEMENT_SIZE 6
