@@ -72,6 +72,25 @@ extern void SDA_add_data_linear(SDA* array, void* data, uint32_t data_size);
 		used data is going to overflow the amount of space we allocated.
 	*/
 
+extern void SDA_insert_element_logarithmic(SDA* array, void* data, uint32_t data_size, uint32_t index);
+	/*
+		Inserts data at index*data_size and will shift over
+		the rest of the array to put in there. In most cases
+		it is better to manually insert into the array to avoid
+		the time it takes to shift data. It will double the allocated
+		size if the buffer threatens to overflow.
+	*/
+
+extern void SDA_insert_element_linear(SDA* array, void* data, uint32_t data_size, uint32_t index);
+	/*
+		Inserts data at index*data_size and will shift over
+		the rest of the array to put in there. In most cases
+		it is better to manually insert into the array to avoid
+		the time it takes to shift data. It will allocated just
+		enough space for the element to fit if it does not fit with
+		the current size of the buffer.
+	*/
+
 #ifdef SDA_ADD_DATA_DEFAULT
 	#define SDA_add_data SDA_add_data_##SDA_ADD_DATA_DEFAULT
 #else
