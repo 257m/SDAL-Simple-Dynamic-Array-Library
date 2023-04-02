@@ -32,6 +32,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef memcpy
+	#define INCLUDE_MEMCPY
+	extern void* memcpy (void* dest, const void* src, size_t len)
+#endif
+
 // Simple resizable/dynamic array implementation
 typedef struct {
 	void*  		data;          	// stores a pointer to the data the array is storing. This will grow and shrink as needed.
