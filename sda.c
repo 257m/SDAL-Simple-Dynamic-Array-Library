@@ -46,20 +46,48 @@ SDA* SDA_create_with_new_data(void* data, uint32_t data_size)
 
 void SDA_add_data_logarithmic(SDA* array, void* data, uint32_t data_size)
 {
-	while ((array->used + data_size) > array->allocated_size)
-		array->allocated_size *= 2;
-	array->data = realloc(array->data, array->allocated_size);
+	if ((array->used + data_size) > array->allocated_size) {
+		do
+			array->allocated_size *= 2;
+		while ((array->used + data_size) > array->allocated_size)
+		array->data = realloc(array->data, array->allocated_size);
+	}
 	memcpy(array->data + array->used, data, data_size);
 	array->used += data_size;
 }
 
 void SDA_add_data_linear(SDA* array, void* data, uint32_t data_size)
 {
-	if ((array->used + data_size) > array->allocated_size)
+	if ((array->used + data_size) > array->allocated_size) {
 		array->allocated_size += (data_size - (array->allocated_size - array->used));
-	array->data = realloc(array->data, array->allocated_size);
+		array->data = realloc(array->data, array->allocated_size);
+	}
 	memcpy(array->data + array->used, data, data_size);
 	array->used += data_size;
+}
+
+void SDA_insert_element_logarithmic(SDA* array, void* data, uint32_t data_size, uint32_t index)
+{
+	if ((array->used + data_size) > array->allocated_size) {
+		do
+			array->allocated_size *= 2;
+		while ((array->used + data_size) > array->allocated_size)
+		array->data = realloc(array->data, array->allocated_size);
+	}
+	memcpy(array->data + (index+1)*data_size, array->data + index*data_size, array->used - (array->data + index*data_size))
+	array->used += data_size;
+	memcpy(array->data + index*data_size, data, data_size);
+}
+
+void SDA_insert_element_linear(SDA* array, void* data, uint32_t data_size, uint32_t index)
+{
+	if ((array->used + data_size) > array->allocated_size) {
+		array->allocated_size += (data_size - (array->allocated_size - array->used));
+		array->data = realloc(array->data, array->allocated_size);
+	}
+	memcpy(array->data + (index+1)*data_size, array->data + index*data_size, array->used - (array->data + index*data_size))
+	array->used += data_size;
+	memcpy(array->data + index*data_size, data, data_size);
 }
 
 void SDA_remove_byte(SDA* array, uint32_t index)
