@@ -73,9 +73,14 @@ extern void SDA_add_data_linear(SDA* array, void* data, uint32_t data_size);
 	*/
 
 #ifdef SDA_ADD_DATA_DEFAULT
-#define SDA_add_data SDA_add_data_##SDA_ADD_DATA_DEFAULT
+	#define SDA_add_data SDA_add_data_##SDA_ADD_DATA_DEFAULT
 #else
-#define SDA_add_data SDA_add_data_logarithmic
+	#define SDA_add_data SDA_add_data_logarithmic
+#endif
+#ifdef SDA_INSERT_ELEMENT_DEFAULT
+	#define SDA_insert_element SDA_insert_element_##SDA_INSERT_ELEMENT_DEFAULT
+#else
+	#define SDA_insert_element SDA_insert_element_logarithmic
 #endif
 	/*
 		The user can specify the add data default before they include the header
