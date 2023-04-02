@@ -28,14 +28,15 @@
 #include "sda.h"
 
 #ifdef INCLUDE_MEMCPY
-void* memcpy (void* dest, const void* src, size_t len)
-{
- 	char *d = dest;
- 	const char *s = src;
-	while (len--)
- 		*d++ = *s++;
-	return dest;
-}
+	void* memcpy (void* dest, const void* src, size_t len)
+	{
+	 	char *d = dest;
+	 	const char *s = src;
+		while (len--)
+ 			*d++ = *s++;
+		return dest;
+	}
+	#undef INCLUDE_MEMCPY
 #endif
 
 SDA* SDA_create(void* data, uint32_t data_size)
