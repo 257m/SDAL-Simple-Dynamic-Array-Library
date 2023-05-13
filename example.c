@@ -36,7 +36,7 @@
 int main(void)
 {
 	// Create a new dynamic array and initialize it's data with Hello
-	DynamicArray* array = SDA_create_with_new_data("Hello", ELEMENT_SIZE);
+	SDA* array = SDA_create_with_new_data("Hello", ELEMENT_SIZE);
 	// Add the word 'World' to the array
 	SDA_add_data(array, "World", ELEMENT_SIZE);
 	// Add the word 'Fives' to the array
