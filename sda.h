@@ -34,7 +34,7 @@
 
 #ifndef memcpy
 	#define INCLUDE_MEMCPY
-	extern void* memcpy (void* dest, const void* src, size_t len)
+	extern void* memcpy (void* dest, const void* src, size_t len);
 #endif
 
 // Simple resizable/dynamic array implementation
